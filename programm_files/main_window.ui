@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1369</width>
+    <height>1012</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Мои финансы</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+
+font-family:Noto Sans SC;
+background-color:rgb(53, 53, 53)
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Noto Sans SC</family>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane{
+border: 1px;
+background:rgba(255, 255, 255, 0);
+}
+
+QTabWidget{
+background-color:rgba(255, 255, 255, 0);
+
+}
+
+QTabWidget:tab-bar
+{
+
+
+alignment:left;
+}
+QTabBar:tab{
+
+background-color:rgba(255, 255, 255, 0);
+color:white;
+width:115px;
+height: 40px;
+}
+QTabBar:tab:selected{
+background-color:rgb(159, 159, 159);
+}
+
+QTabBar:tab:selected:hover{
+background-color: rgb(159, 159, 159);
+}
+
+QTabBar:tab:hover{
+background-color: rgb(159, 159, 159);
+}</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/icons2/icons/report.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Обзор</string>
+       </attribute>
+       <widget class="QLineEdit" name="all_incomes">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans SC</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+        </property>
+        <property name="text">
+         <string>Доходы:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="all_outcomes">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans SC</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+        </property>
+        <property name="text">
+         <string>Расходы:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="all_categories">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>130</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans SC</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+        </property>
+        <property name="text">
+         <string>Категории:</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="overview_text">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>180</y>
+          <width>321</width>
+          <height>681</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="user_information_button">
+        <property name="geometry">
+         <rect>
+          <x>1140</x>
+          <y>30</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+
+color: white;
+
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="font.qrc">
+          <normaloff>:/icons2/icons/user.png</normaloff>:/icons2/icons/user.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QWidget" name="user_menu" native="true">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>1130</x>
+          <y>90</y>
+          <width>201</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>9</y>
+           <width>181</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="edit_account">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+
+color: white;
+
+
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="font.qrc">
+              <normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="done_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+
+color: white;
+
+
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="font.qrc">
+              <normaloff>:/icons2/icons/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons2/icons/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="username_inmenu">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string>UserName: user</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="hello_label_main">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>30</y>
+          <width>741</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+        </property>
+        <property name="text">
+         <string>Здравствуй, user!</string>
+        </property>
+       </widget>
+       <widget class="QChartView" name="graphicsView">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>70</y>
+          <width>741</width>
+          <height>791</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="overview_3">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/icons2/icons/payments_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Расходы</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>1341</width>
+          <height>921</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="outcome">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="edit_outcome">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Изменить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="outcomes">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <family>Noto Sans SC</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string>Всего: </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLineEdit" name="Search_by_id_outcome">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Поиск по ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QPushButton" name="search_button_outcome">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Поиск!</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="outcomes_categories">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTipDuration">
+            <number>2</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="delete_outcome">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="add_category_outcome">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить Категорию</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="6">
+          <widget class="QTableWidget" name="outcome_transactions">
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/icons2/icons/cash.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Доходы</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>1341</width>
+          <height>921</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="income_overall">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <family>Noto Sans SC</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string>Всего: </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="income">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="edit_income">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Изменить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="delete_income">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="add_category_income">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить Категорию</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="6">
+          <widget class="QTableWidget" name="income_transactions">
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QPushButton" name="search_button_income">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Поиск!</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="income_categories">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTipDuration">
+            <number>2</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLineEdit" name="Search_by_id_income">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Поиск по ID</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/icons2/icons/tax-credit.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Долги</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>1341</width>
+          <height>921</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="2">
+          <widget class="QPushButton" name="edit_duty">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Изменить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="add_category_duty">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить Категорию</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QPushButton" name="search_button_duty">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>Поиск!</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="duty_categories">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTipDuration">
+            <number>2</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="all_duty">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <family>Noto Sans SC</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string>Всего: </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="duty">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Добавить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/add_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="delete_duty">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+border-color:rgbrgb(177, 177, 177);
+border-radius: 8px;
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="6">
+          <widget class="QTableWidget" name="duty_transactions">
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLineEdit" name="Search_by_id_duty">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Поиск по ID</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/icons2/icons/diskette.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Сохранить</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>290</y>
+          <width>771</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+           </property>
+           <property name="text">
+            <string>Выберите папку сохранения:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="file_directory_line">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>C:\</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="choose_directory">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="font.qrc">
+             <normaloff>:/icons/icons/folder_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/icons/icons/folder_open_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+           </property>
+           <property name="text">
+            <string>Выберите название файла:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLineEdit" name="file_name_line">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>example</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);</string>
+           </property>
+           <property name="text">
+            <string>Расширение:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QComboBox" name="file_extension_combo">
+           <property name="styleSheet">
+            <string notr="true">
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+
+</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>.txt</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>.dat</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>.ini</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QPushButton" name="save_button">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+
+color: white;
+
+background-color:rgb(30, 30, 30);
+border:2px solid;
+border-color:rgb(85, 85, 85);
+color:rgb(161, 161, 161);
+}
+QPushButton:hover{
+color:rgb(0, 85, 255);
+background-color: rgb(159, 159, 159);
+}
+
+QPushButton:pressed{
+color:rgb(0, 85, 255);
+background-color:rgb(159, 159, 159)
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Сохранить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>qchartview</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="font.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>user_information_button</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>user_menu</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1184</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1238</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
